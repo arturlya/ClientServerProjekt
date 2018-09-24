@@ -74,6 +74,44 @@ public class TicTacToeServer extends Server {
             }
         }
         send(pClientIP,pClientPort,"UPDATE"+getMapInformation());
+        for(int i=0;i<map.length;i++){
+            for(int j=0;j<map[i].length;j++){
+                if((map[i][0].getValue()==1 && map[i][1].getValue()==1 && map[i][2].getValue()==1)){
+                    sendToAll("WIN1");
+                    sendToAll("TEXTSpieler 1 hat gewonnen!");
+                }
+                if((map[0][j].getValue()==1 && map[1][j].getValue()==1 && map[2][j].getValue()==1)){
+                    sendToAll("WIN1");
+                    sendToAll("TEXTSpieler 1 hat gewonnen!");
+                }
+                if(map[0][0].getValue()==1 && map[1][1].getValue() == 1 && map[2][2].getValue() == 2){
+                    sendToAll("WIN1");
+                    sendToAll("TEXTSpieler 1 hat gewonnen!");
+                }
+                if(map[0][2].getValue() == 1 && map[1][1].getValue() == 1 && map[2][0].getValue() == 2){
+                    sendToAll("WIN1");
+                    sendToAll("TEXTSpieler 1 hat gewonnen!");
+                }
+                if((map[i][0].getValue()==2 && map[i][1].getValue()==2 && map[i][2].getValue()==2)){
+                    sendToAll("WIN2");
+                    sendToAll("TEXTSpieler 2 hat gewonnen!");
+                }
+                if((map[0][j].getValue()==2 && map[1][j].getValue()==2 && map[2][j].getValue()==2)){
+                    sendToAll("WIN2");
+                    sendToAll("TEXTSpieler 2 hat gewonnen!");
+                }
+                if(map[0][0].getValue()==2 && map[1][1].getValue() == 2 && map[2][2].getValue() == 2){
+                    sendToAll("WIN2");
+                    sendToAll("TEXTSpieler 2 hat gewonnen!");
+                }
+                if(map[0][2].getValue() == 2 && map[1][1].getValue() == 2 && map[2][0].getValue() == 2){
+                    sendToAll("WIN2");
+                    sendToAll("TEXTSpieler 2 hat gewonnen!");
+                }
+            }
+        }
+
+
     }
 
     @Override
