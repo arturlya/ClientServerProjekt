@@ -19,8 +19,8 @@ public class TicTacToeServer extends Server {
         numberOfClients =0;
         map = new Field[3][3];
         createMap();
-
-
+        createMap();
+        createMap();
         System.out.println(getMapInformation());
     }
 
