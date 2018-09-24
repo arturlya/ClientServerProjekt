@@ -11,8 +11,7 @@ public class TicTacToeServer extends Server {
 
     Field[][] map;
 
-
-    //Hillllllllll
+    
     public TicTacToeServer(int port){
         super(port);
         System.out.println("running Server");
