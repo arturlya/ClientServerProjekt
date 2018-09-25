@@ -3,6 +3,9 @@ package model;
 import model.abitur.netz.Client;
 import model.abitur.netz.Server;
 
+/**
+ * Klasse des Servers zum TicTacToe spielen.
+ */
 public class TicTacToeServer extends Server {
 
     /** Anzahl der Clients auf dem Server*/
