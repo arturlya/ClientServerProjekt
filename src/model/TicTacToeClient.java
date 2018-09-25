@@ -88,10 +88,7 @@ public class TicTacToeClient extends Client implements DrawableObject {
                 }
                 updateField(data);
             }
-        }else if(pMessage.contains("WIN")){
-            String[] winner = pMessage.split("WIN");
-
-        }
+        }else if(pMessage.contains("WIN")) turn = false;
     }
 
     @Override

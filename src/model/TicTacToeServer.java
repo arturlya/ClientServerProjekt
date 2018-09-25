@@ -107,6 +107,7 @@ public class TicTacToeServer extends Server {
                     sendToAll("WIN1");
                     sendToAll("TEXTSpieler 1 hat gewonnen!");
                     playerWon = true;
+
                 }
                 if((map[0][j].getValue()==1 && map[1][j].getValue()==1 && map[2][j].getValue()==1)){
                     sendToAll("WIN1");
