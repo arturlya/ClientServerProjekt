@@ -88,6 +88,9 @@ public class TicTacToeClient extends Client implements DrawableObject {
                 }
                 updateField(data);
             }
+        }else if(pMessage.contains("WIN")){
+            String[] winner = pMessage.split("WIN");
+
         }
     }
 
@@ -100,7 +103,6 @@ public class TicTacToeClient extends Client implements DrawableObject {
                     for (int j = 0; j < 3; j++) {
                         if (e.getX() >= i * 200 + 100 && e.getX() < i * 200 + 300 && e.getY() >= j * 200 + 80 && e.getY() < j * 200 + 280) {
                             String message = "ACTIONNEXT" + i + "FIELD" + j + "FIELD" + playerNumber + "";
-                            System.out.println(message);
                             send(message);
                         }
                     }

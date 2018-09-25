@@ -32,7 +32,6 @@ public class TicTacToeServer extends Server {
         createMap();
 
 
-        System.out.println(getMapInformation());
     }
 
 
